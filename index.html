@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cows&Bulls</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="wraper">
+      <span class="title">Быки и Коровы</span>
+      <div class="rules" id="rules">
+        <p class="annotation">
+          Добро пожаловать в игру "Быки и Коровы. <br />
+          В этой игре вам нужно угадать число, загаданное компьютером.<br />
+          Число состоит из четырёх цифр в формате "1234". <br />
+          Цифры не повторяются и загаданное число не начинается с нуля.<br />
+          "Корова" означает, что одна из цифр есть в числе,<br />
+          но стоит не на своём месте.<br />
+          Бык - цифра есть в числе и стоит на своём месте
+        </p>
+        <button class="button" onclick="gameStart()">Сыграть!</button>
+      </div>
+
+      <span class="secretTitle" id="secretTitle">Секретное число:</span>
+      <input type="text" class="secret" id="secret" readonly />
+      <div class="log" name="" id="message">
+        <p>
+          Введите число в формате "1234" не начинающееся с нуля и без
+          повторяющихся чисел в поле ниже.
+        </p>
+      </div>
+      <input type="text" class="user-input" id="userInput" />
+      <button class="button" id="checkButton" onclick="showResults()">
+        Проверить
+      </button>
+      <button class="button" id="repeatButton" onclick="gameStart()" ()>
+        Заново
+      </button>
+    </div>
+    <script>
+      hideGame();
+    </script>
+  </body>
+</html>

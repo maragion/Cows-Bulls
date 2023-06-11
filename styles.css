@@ -1,0 +1,97 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wraper {
+  max-width: 500px;
+  max-height: 600px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 32px;
+  display: inline-block;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  width: 75%;
+  border: 1px solid #0a62b4;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.annotation {
+  width: 100%;
+  height: 75%;
+  text-align: center;
+}
+
+.secretTitle {
+  margin-top: 10px;
+}
+
+.secret {
+  width: 30%;
+  height: 12%;
+  border: 1px solid gray;
+  margin-top: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 36px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.log {
+  height: 40%;
+  width: 75%;
+  border: 1px solid gray;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.user-input {
+  width: 30%;
+  height: 12%;
+  border: 1px solid gray;
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+  font-size: 36px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.button {
+  width: 30%;
+  height: 12%;
+  border: 1px solid gray;
+  margin-top: 10px;
+  padding: 6px;
+  text-align: center;
+  font-size: 24px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #0a62b4;
+  color: aliceblue;
+}
