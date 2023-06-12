@@ -106,7 +106,7 @@ function checkWin() {
     if (bulls == 4) {
         document.getElementById("checkButton").style.display = "none";
         document.getElementById("repeatButton").style.display = "block";
-        result += `Число отгадано! Количество попыток: ${count} Если хотите сыграть снова, нажмите на кнопку ниже.`;
+        result += `Число отгадано!<br> Количество попыток: ${count}.<br> Если хотите сыграть снова, нажмите на кнопку ниже.`;
     }
 }
 
