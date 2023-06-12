@@ -48,7 +48,7 @@ body {
 }
 
 .counter {
-  width: 32%;
+  width: 138px;
   height: 12%;
   border: 1px solid gray;
   margin-top: 5px;
@@ -69,7 +69,7 @@ body {
 }
 
 .user-input {
-  width: 32%;
+  width: 138px;
   height: 12%;
   border: 1px solid gray;
   margin-top: 10px;
@@ -82,7 +82,7 @@ body {
 
 .button {
   height: 72px;
-  /* width: 40%; */
+  /* width: 138px; */
   box-sizing: border-box;
   border: 1px solid gray;
   margin-top: 10px;
