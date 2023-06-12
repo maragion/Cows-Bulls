@@ -4,55 +4,50 @@ let cows = 0;
 let bulls = 0;
 let userNumber;
 let result = "";
-
-function hideSecretNum() {
-    document.getElementById("secret").style.color = "transparent"
-}
-
-function showSecretNum() {
-    if (bulls == 4) {
-        document.getElementById("secret").style.color = "black"
-    }
-}
+let secretNumber;
+let count = 0;
 
 function hideGame() {
-    document.getElementById("secret").style.display = "none"
-    document.getElementById("message").style.display = "none"
-    document.getElementById("userInput").style.display = "none"
-    document.getElementById("checkButton").style.display = "none"
-    document.getElementById("repeatButton").style.display = "none"
-    document.getElementById("secretTitle").style.display = "none"
-
+    document.getElementById("counter").style.display = "none";
+    document.getElementById("message").style.display = "none";
+    document.getElementById("userInput").style.display = "none";
+    document.getElementById("checkButton").style.display = "none";
+    document.getElementById("repeatButton").style.display = "none";
+    document.getElementById("counterTitle").style.display = "none";
 }
 
 function hideRules() {
-    document.getElementById("rules").style.display = "none"
+    document.getElementById("rules").style.display = "none";
+}
+
+function tryCount() {
+    count += 1;
+    document.getElementById("counter").value = count;
 }
 
 function showGame() {
-    document.getElementById("secret").style.display = "block"
-    document.getElementById("message").style.display = "block"
-    document.getElementById("userInput").style.display = "block"
-    document.getElementById("checkButton").style.display = "block"
-    document.getElementById("secretTitle").style.display = "none"
-    document.getElementById("secretTitle").style.display = "inline"
-    document.getElementById("repeatButton").style.display = "none"
-
+    document.getElementById("counter").style.display = "block";
+    document.getElementById("message").style.display = "block";
+    document.getElementById("userInput").style.display = "block";
+    document.getElementById("checkButton").style.display = "block";
+    document.getElementById("counterTitle").style.display = "inline";
+    document.getElementById("repeatButton").style.display = "none";
+    document.getElementById("counter").value = count;
 }
 
 function getRandInt() {
-    let number = ""
+    secretNumber = "";
     for (let i = 0; i < 4; i++) {
         let numberPart = Math.floor(Math.random() * 10);
         if (i === 0 && numberPart === 0) {
             i--;
             continue;
-        } else if (number.includes(numberPart)) {
+        } else if (secretNumber.includes(numberPart)) {
             i--;
             continue;
         }
-        number += numberPart;
-    } return number;
+        secretNumber += numberPart;
+    } return secretNumber;
 }
 
 function getUserNumber() {
@@ -80,8 +75,8 @@ function checkUserInput() {
                 count += 1;
             }
             if (count > 1) {
-                result = "<p>Цифры не должны повторяться!</p>"
-                return result
+                result = "<p>Цифры не должны повторяться!</p>";
+                return result;
             }
         }
     }
@@ -90,7 +85,6 @@ function checkUserInput() {
 }
 
 function getCowsAndBulls(number) {
-    let secretNumber = document.getElementById("secret").value;
     cows = 0;
     bulls = 0;
 
@@ -110,17 +104,16 @@ function getCowsAndBulls(number) {
 
 function checkWin() {
     if (bulls == 4) {
-        document.getElementById("checkButton").style.display = "none"
-        document.getElementById("repeatButton").style.display = "block"
-        result += "Число отгадано! Если хотите сыграть снова, нажмите на кнопку ниже."
+        document.getElementById("checkButton").style.display = "none";
+        document.getElementById("repeatButton").style.display = "block";
+        result += `Число отгадано! Количество попыток: ${count} Если хотите сыграть снова, нажмите на кнопку ниже.`;
     }
 }
 
 function gameStart() {
-    hideRules()
-    document.getElementById("secret").value = getRandInt();
-    hideSecretNum();
-    showGame()
+    hideRules();
+    getRandInt();
+    showGame();
 }
 
 function getResults() {
@@ -133,6 +126,7 @@ function getResults() {
 
     } else {
         getCowsAndBulls(check);
+        tryCount();
     }
 }
 
@@ -140,11 +134,12 @@ function showResults() {
     let message = document.getElementById("message");
 
     getResults();
-
-    showSecretNum()
-
-    checkWin()
-
-    message.innerHTML += `Вы ввели ${userNumber}. ${result}`
+    checkWin();
+    
+    message.innerHTML += `Вы ввели ${userNumber}. ${result}`;
 }
 
+function restart() {
+    count = 0;
+    gameStart();
+}

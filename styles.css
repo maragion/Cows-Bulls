@@ -29,8 +29,9 @@ body {
 .rules {
   display: flex;
   flex-direction: column;
-  height: 75%;
+  height: 85%;
   width: 75%;
+  margin-top: 10px;
   border: 1px solid #0a62b4;
   justify-content: center;
   align-items: center;
@@ -39,15 +40,15 @@ body {
 
 .annotation {
   width: 100%;
-  height: 75%;
+  height: 60%;
 }
 
-.secretTitle {
+.counterTitle {
   margin-top: 10px;
 }
 
-.secret {
-  width: 30%;
+.counter {
+  width: 40%;
   height: 12%;
   border: 1px solid gray;
   margin-top: 5px;
@@ -68,7 +69,7 @@ body {
 }
 
 .user-input {
-  width: 30%;
+  width: 40%;
   height: 12%;
   border: 1px solid gray;
   margin-top: 10px;
@@ -81,9 +82,11 @@ body {
 
 .button {
   height: 12%;
+  /* width: 40%; */
+  box-sizing: border-box;
   border: 1px solid gray;
   margin-top: 10px;
-  padding: 6px;
+  padding: 15px;
   text-align: center;
   font-size: 24px;
   border-radius: 5px;

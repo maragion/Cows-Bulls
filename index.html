@@ -25,8 +25,8 @@
         <button class="button" onclick="gameStart()">Сыграть!</button>
       </div>
 
-      <span class="secretTitle" id="secretTitle">Секретное число:</span>
-      <input type="text" class="secret" id="secret" readonly />
+      <span class="counterTitle" id="counterTitle">Количество попыток:</span>
+      <input type="text" class="counter" id="counter" readonly />
       <div class="log" name="" id="message">
         <p>
           Введите число в формате "1234" не начинающееся с нуля и без
@@ -37,7 +37,7 @@
       <button class="button" id="checkButton" onclick="showResults()">
         Проверить
       </button>
-      <button class="button" id="repeatButton" onclick="gameStart()" ()>
+      <button class="button" id="repeatButton" onclick="restart()" ()>
         Заново
       </button>
     </div>
