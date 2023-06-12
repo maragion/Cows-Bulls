@@ -81,7 +81,7 @@ body {
 }
 
 .button {
-  height: 12%;
+  height: 72px;
   /* width: 40%; */
   box-sizing: border-box;
   border: 1px solid gray;
