@@ -7,6 +7,11 @@ let result = "";
 let secretNumber;
 let count = 0;
 
+function scrollDown() {
+    let elem = document.getElementById('message');
+    elem.scrollTop = elem.scrollHeight;
+}
+
 function hideGame() {
     document.getElementById("counter").style.display = "none";
     document.getElementById("message").style.display = "none";
@@ -18,6 +23,8 @@ function hideGame() {
 
 function hideRules() {
     document.getElementById("rules").style.display = "none";
+    document.getElementById("startButton").style.display = "none";
+
 }
 
 function tryCount() {
@@ -57,7 +64,7 @@ function getUserNumber() {
 
 function checkUserInput() {
     if (userNumber.length > 4 || userNumber.length < 4) {
-        result = "<p>Необходимое колличество символов: 4</p>";
+        result = "<p >Необходимое колличество символов: 4</p>";
         return result;
     }
 
@@ -68,14 +75,14 @@ function checkUserInput() {
             result = "<p>Число не должно начинаться с ноля!</p>";
             return result;
         } else if (!(Number.isInteger(Number(userNumber[i])))) {
-            result = "<p>Во вводе должны содержаться только цифры!</p>";
+            result = "<p >Во вводе должны содержаться только цифры!</p>";
             return result;
         } for (let j = 0; j < 4; j++) {
             if (userNumber[i] === userNumber[j]) {
                 count += 1;
             }
             if (count > 1) {
-                result = "<p>Цифры не должны повторяться!</p>";
+                result = "<p >Цифры не должны повторяться!</p>";
                 return result;
             }
         }
@@ -136,7 +143,8 @@ function showResults() {
     getResults();
     checkWin();
     
-    message.innerHTML += `<p>Вы ввели ${userNumber}. ${result}</p>`;
+    message.innerHTML += `<p class="log-message">Вы ввели ${userNumber}. ${result}</p>`;
+    scrollDown()
 }
 
 function restart() {

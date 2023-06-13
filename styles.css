@@ -8,7 +8,7 @@ body {
 }
 
 body {
-  background-color: #629fd8;
+  background-color: #00ab76;
 }
 
 .wraper {
@@ -18,29 +18,20 @@ body {
   border: 1px solid gray;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   background-color: aliceblue;
+  box-shadow: 14px 18px 5px 0px rgba(0,0,0,0.58);
+  -webkit-box-shadow: 14px 18px 5px 0px rgba(0,0,0,0.58);
+  -moz-box-shadow: 14px 18px 5px 0px rgba(0,0,0,0.58);
 }
 
 .title {
   font-size: 32px;
   display: inline-block;
-}
-
-.rules {
-  display: flex;
-  flex-direction: column;
-  height: 85%;
-  margin-top: 10px;
-  text-align:start;
-  justify-content:space-between;
-  align-items: center;
-  padding: 10px;
-  border-radius: 5px;
 }
 
 .counterTitle {
@@ -66,7 +57,11 @@ body {
   margin-top: 10px;
   border-radius: 5px;
   padding: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+
+.log-message {
+  margin-top: 5px;
 }
 
 .user-input {
@@ -91,7 +86,7 @@ body {
   text-align: center;
   font-size: 24px;
   border-radius: 5px;
-  background: #0a62b4;
+  background: #4573D5;
   color: aliceblue;
 }
 
@@ -103,12 +98,15 @@ body {
     border: 1px solid gray;
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     background-color: aliceblue;
+    box-shadow: 14px 18px 5px 0px rgba(0,0,0,0.58);
+    -webkit-box-shadow: 14px 18px 5px 0px rgba(0,0,0,0.58);
+    -moz-box-shadow: 14px 18px 5px 0px rgba(0,0,0,0.58);
   }
 
   .button {
@@ -121,7 +119,7 @@ body {
     text-align: center;
     font-size: 24px;
     border-radius: 5px;
-    background: #0a62b4;
+    background: #4573D5;
     color: aliceblue;
     align-self: flex-end;
   }
@@ -129,7 +127,7 @@ body {
 }
 
 .win {
-  background: #18bd08;
+  background: #6fad2b;
   padding: 5px;
   border-radius: 5px;
   color: aliceblue;
