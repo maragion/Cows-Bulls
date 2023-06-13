@@ -26,23 +26,6 @@ body {
   background-color: aliceblue;
 }
 
-@media only screen and (max-width: 600px) {
-  .wraper {
-    max-width: 90%;
-    max-height: 600px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: aliceblue;
-  }
-}
-
 .title {
   font-size: 32px;
   display: inline-block;
@@ -52,17 +35,12 @@ body {
   display: flex;
   flex-direction: column;
   height: 85%;
-  width: 85%;
   margin-top: 10px;
-  border: 1px solid #0a62b4;
-  justify-content: center;
+  text-align:start;
+  justify-content:space-between;
   align-items: center;
   padding: 10px;
-}
-
-.annotation {
-  width: 100%;
-  height: 60%;
+  border-radius: 5px;
 }
 
 .counterTitle {
@@ -117,11 +95,45 @@ body {
   color: aliceblue;
 }
 
+@media only screen and (max-width: 600px) {
+  .wraper {
+    max-width: 90%;
+    max-height: 600px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+  }
+
+  .button {
+    height: 72px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+    background: #0a62b4;
+    color: aliceblue;
+    align-self: flex-end;
+  }
+
+}
+
 .win {
   background: #18bd08;
   padding: 5px;
   border-radius: 5px;
   color: aliceblue;
+  margin-top: 10px;
 }
 
 /* Chrome, Safari, Edge, Opera */
