@@ -106,7 +106,7 @@ function checkWin() {
     if (bulls == 4) {
         document.getElementById("checkButton").style.display = "none";
         document.getElementById("repeatButton").style.display = "block";
-        result += `Число отгадано!<br> Количество попыток: ${count}.<br> Если хотите сыграть снова, нажмите на кнопку ниже.`;
+        result += `<div class="win">Число отгадано!<br> Количество попыток: ${count}.<br> Если хотите сыграть снова, нажмите на кнопку ниже.</div>`;
     }
 }
 
@@ -136,7 +136,7 @@ function showResults() {
     getResults();
     checkWin();
     
-    message.innerHTML += `Вы ввели ${userNumber}. ${result}`;
+    message.innerHTML += `<p>Вы ввели ${userNumber}. ${result}</p>`;
 }
 
 function restart() {

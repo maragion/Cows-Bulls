@@ -7,6 +7,10 @@ body {
   align-items: center;
 }
 
+body {
+  background-color: #629fd8;
+}
+
 .wraper {
   max-width: 450px;
   max-height: 600px;
@@ -19,6 +23,24 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: aliceblue;
+}
+
+@media only screen and (max-width: 600px) {
+  .wraper {
+    max-width: 90%;
+    max-height: 600px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+  }
 }
 
 .title {
@@ -30,7 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 85%;
-  width: 75%;
+  width: 85%;
   margin-top: 10px;
   border: 1px solid #0a62b4;
   justify-content: center;
@@ -56,6 +78,7 @@ body {
   text-align: center;
   font-size: 36px;
   border-radius: 5px;
+  border: none;
 }
 
 .log {
@@ -82,7 +105,7 @@ body {
 
 .button {
   height: 72px;
-  /* width: 138px; */
+  width: 100%;
   box-sizing: border-box;
   border: 1px solid gray;
   margin-top: 10px;
@@ -91,6 +114,13 @@ body {
   font-size: 24px;
   border-radius: 5px;
   background: #0a62b4;
+  color: aliceblue;
+}
+
+.win {
+  background: #18bd08;
+  padding: 5px;
+  border-radius: 5px;
   color: aliceblue;
 }
 
