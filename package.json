@@ -1,0 +1,14 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "watch": "node-sass --watch style.scss style.css",
+    "build": "node-sass --output-style=compressed style.scss style.min.css"
+  },
+  "author": "",
+  "devDependencies": {
+    "node-sass": "~8.0.0"
+  }
+}
