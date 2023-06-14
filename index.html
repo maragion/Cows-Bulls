@@ -6,32 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cows&Bulls</title>
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.min.css" />
     <script src="script.js"></script>
   </head>
   <body>
-    <div class="wraper">
-      <span class="title">Быки и Коровы</span>
+    <div class="game">
+      <span class="game__title">Быки и Коровы</span>
 
-      <p id="rules">
+      <div class="log" id="rules">
         В этой игре вам нужно угадать число, загаданное компьютером. Число
         состоит из четырёх цифр в формате "1234". Цифры не повторяются и
         загаданное число не начинается с нуля. "Корова" означает, что одна из
         цифр есть в числе, но стоит не на своём месте. "Бык" - цифра есть в
         числе и стоит на своём месте.
-      </p>
+      </div>
 
-      <button class="button" id="startButton" onclick="gameStart()">Сыграть!</button>
+      <button class="button" id="startButton" onclick="gameStart()">
+        Сыграть!
+      </button>
 
-      <span class="counterTitle" id="counterTitle">Количество попыток:</span>
-      <input type="text" class="counter" id="counter" readonly />
-      <div class="log" name="" id="message">
-        <p>
+      <span class="game__counterTitle" id="counterTitle"
+        >Количество попыток:</span
+      >
+      <input type="text" class="game__counter" id="counter" readonly />
+      <div class="log log_border" name="" id="message">
+        <div class="log__message">
           Введите число в формате "1234" не начинающееся с нуля и без
           повторяющихся чисел в поле ниже.
-        </p>
+        </div>
       </div>
-      <input type="number" class="user-input" id="userInput" />
+      <input type="number" class="game__userInput" id="userInput" />
       <button class="button" id="checkButton" onclick="showResults()">
         Проверить
       </button>

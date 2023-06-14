@@ -64,7 +64,7 @@ function getUserNumber() {
 
 function checkUserInput() {
     if (userNumber.length > 4 || userNumber.length < 4) {
-        result = "<p >Необходимое колличество символов: 4</p>";
+        result = "Необходимое колличество символов: 4";
         return result;
     }
 
@@ -72,17 +72,17 @@ function checkUserInput() {
         let count = 0;
 
         if (i == 0 && userNumber[i] == 0) {
-            result = "<p>Число не должно начинаться с ноля!</p>";
+            result = "Число не должно начинаться с ноля!";
             return result;
         } else if (!(Number.isInteger(Number(userNumber[i])))) {
-            result = "<p >Во вводе должны содержаться только цифры!</p>";
+            result = "Во вводе должны содержаться только цифры!";
             return result;
         } for (let j = 0; j < 4; j++) {
             if (userNumber[i] === userNumber[j]) {
                 count += 1;
             }
             if (count > 1) {
-                result = "<p >Цифры не должны повторяться!</p>";
+                result = "Цифры не должны повторяться!";
                 return result;
             }
         }
@@ -105,7 +105,7 @@ function getCowsAndBulls(number) {
                 }
             }
     }
-    result = (`<p>Коровы ${cows}, Быки ${bulls}</p>`);
+    result = (`Коровы ${cows}, Быки ${bulls}`);
     return result;
 }
 
@@ -113,7 +113,7 @@ function checkWin() {
     if (bulls == 4) {
         document.getElementById("checkButton").style.display = "none";
         document.getElementById("repeatButton").style.display = "block";
-        result += `<div class="win">Число отгадано!<br> Количество попыток: ${count}.<br> Если хотите сыграть снова, нажмите на кнопку ниже.</div>`;
+        result += `<div class="log__message log__message_win">Число отгадано!<br> Количество попыток: ${count}.<br> Если хотите сыграть снова, нажмите на кнопку ниже.</div>`;
     }
 }
 
@@ -143,7 +143,7 @@ function showResults() {
     getResults();
     checkWin();
     
-    message.innerHTML += `<p class="log-message">Вы ввели ${userNumber}. ${result}</p>`;
+    message.innerHTML += `<div class="log__message">Вы ввели ${userNumber}. ${result}</div>`;
     scrollDown()
 }
 
